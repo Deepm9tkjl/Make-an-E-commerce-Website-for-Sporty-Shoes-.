@@ -14,7 +14,7 @@ class xor {
         return ans;
     }
      
- 
+ //xor
     public static void main(String[] args)
     {
          
