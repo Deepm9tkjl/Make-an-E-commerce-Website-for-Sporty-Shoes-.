@@ -1,29 +1,37 @@
 package softnerv;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class ladder {
 
 	
-	void printLeaders(int arr[], int size)
-	{
-		for (int i = 0; i < size; i++)
-		{
-			int j;
-			for (j = i + 1; j < size; j++)
-			{
-				if (arr[i] <=arr[j])
-					break;
+	public  static ArrayList<Integer> printLeaders(int arr[])
+	{ ArrayList<Integer> ans=new   ArrayList<Integer>();
+	int rmax=Integer.MIN_VALUE;
+	
+		for (int i = arr.length-1; i >=0; i--) {
+			if(arr[i]>=rmax) {
+				ans.add(arr[i]);
+				rmax=arr[i];
 			}
-			if (j == size) 
-				System.out.print(arr[i] + " ");
+			
 		}
+		Collections.reverse(ans);
+		
+		return ans;
 	}
 
 	
 	public static void main(String[] args)
 	{
-		ladder lead = new ladder();
-		int arr[] = new int[]{16, 17, 4, 3, 5, 2};
-		int n = arr.length;
-		lead.printLeaders(arr, n);
+	
+		int arr[] = new int[]{16, 1, 4, 3, 5, 2};
+		
+	
+	ArrayList<Integer> ans=printLeaders(arr);
+	for(int an:ans) {
+		System.out.print(an +"  ");
+	}
 	}
 }
