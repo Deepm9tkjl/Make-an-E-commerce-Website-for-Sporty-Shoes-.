@@ -1,9 +1,6 @@
-package softnerv;
 
-import java.util.ArrayList;
-import java.util.Collections;
 
-public class ladder {
+ublic class ladder {
 
 	
 	public  static ArrayList<Integer> printLeaders(int arr[])
@@ -32,6 +29,6 @@ public class ladder {
 	ArrayList<Integer> ans=printLeaders(arr);
 	for(int an:ans) {
 		System.out.print(an +"  ");
-	}
-	}
-}
+	
+	
+
